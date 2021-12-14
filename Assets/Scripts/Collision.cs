@@ -12,7 +12,7 @@ public class Collision : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.tag == "Package")
+        if (other.tag == "Package" && !hasPackage)
             {
                 Debug.Log("Package collected");
                 hasPackage = true;
