@@ -17,10 +17,10 @@ public class Collision : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    void OnCollisionEnter2D(Collision2D other) 
-    {
-        Debug.Log("Ow! Drive more carefully!");
-    }
+//    void OnCollisionEnter2D(Collision2D other) 
+//    {
+//        Debug.Log("Ow! Drive more carefully!");
+//    }
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Package" && !hasPackage)
@@ -36,6 +36,7 @@ public class Collision : MonoBehaviour
             hasPackage = false;
             spriteRenderer.color = noPackageColor;
         }
+
     }
 
 }
